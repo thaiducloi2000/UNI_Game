@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Action\Offer.cs" />
     <Compile Include="Assets\Scripts\Object\Player.cs" />
+    <Compile Include="Assets\Scripts\Object\Deal.cs" />
     <Compile Include="Assets\Scripts\Manager\UNI05_GameManager.cs" />
     <Compile Include="Assets\Scripts\Manager\MoveManagment.cs" />
     <Compile Include="Assets\Scripts\Manager\DiceManager.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Assets\Scripts\Action\Opportunity.cs" />
     <Compile Include="Assets\Scripts\Action\Liability.cs" />
     <Compile Include="Assets\Scripts\Action\DownSize.cs" />
+    <Compile Include="Assets\Scripts\Action\Action.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

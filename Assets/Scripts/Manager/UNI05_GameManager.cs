@@ -10,6 +10,7 @@ public class UNI05_GameManager : MonoBehaviour
     [SerializeField] public GameObject Chessboard;
     public MoveManagment moveManagment;
     [SerializeField] public GameObject Player;
+    public Opportunity opportunities;
     public int diceResult = 0;
 
     private void Awake()
@@ -26,6 +27,7 @@ public class UNI05_GameManager : MonoBehaviour
     private void Start()
     {
         SpawnPlayer();
+        loadOpportunities();
         moveManagment = MoveManagment.instance;
     }
 
@@ -56,5 +58,15 @@ public class UNI05_GameManager : MonoBehaviour
     public void Move(int numOfDice)
     {
         moveManagment.Move(Player,numOfDice,Blocks);
+    }
+
+    public void loadOpportunities()
+    {
+        //this.opportunities = new List<Opportunity>();
+        //Opportunity op = new Opportunity(Opportunity.typeDeal.Small,"Mutual Fund","Lower interest rates drive maket and fund to strong showing.",5,0,30,10,0);
+        //opportunities.Add(op);
+        Opportunity op = new Opportunity(Opportunity.typeDeal.Small,"Mutual Fund", "Lower interest rates drive maket and fund to strong showing.", 5, 0, 30, 10, 0);
+    
+        this.opportunities = op;
     }
 }

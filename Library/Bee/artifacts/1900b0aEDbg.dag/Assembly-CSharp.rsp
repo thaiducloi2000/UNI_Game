@@ -356,6 +356,7 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/Action/Action.cs"
 "Assets/Scripts/Action/Charity.cs"
 "Assets/Scripts/Action/Child.cs"
 "Assets/Scripts/Action/DownSize.cs"
@@ -366,6 +367,7 @@
 "Assets/Scripts/Manager/MoveManagment.cs"
 "Assets/Scripts/Manager/UNI05_GameManager.cs"
 "Assets/Scripts/Object/Block.cs"
+"Assets/Scripts/Object/Deal.cs"
 "Assets/Scripts/Object/Player.cs"
 -langversion:9.0
 
