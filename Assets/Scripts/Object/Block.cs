@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    public enum Action { Offer, Opportunity, Liability, Child, Charity, Paycheck, DownSize };
+    public enum Action { Offer, Opportunity, Doodads, Charity, Paycheck, DownSize };
     [Header("Block Detail")]
     [SerializeField] public string ID;
     [SerializeField] public Action action;
@@ -24,11 +24,7 @@ public class Block : MonoBehaviour
         {
             render.material.color = Color.green;
         }
-        if (this.action == Action.Liability)
-        {
-            render.material.color = Color.gray;
-        }
-        if (this.action == Action.Child)
+        if (this.action == Action.Doodads)
         {
             Color orage = new Color(1.0f, 0.64f, 0.0f);
             render.material.color = orage;

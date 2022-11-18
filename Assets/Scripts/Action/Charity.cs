@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class Charity : MonoBehaviour
+public class Charity : Action
 {
-    // Start is called before the first frame update
-    void Start()
+    public Charity(float cost,string name, string description)
     {
-        
+        this.type = Action.ActionType.Charity;
+        this.cost = cost;
+        this.description = description;
+        this.name = name;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public override void doAction()
     {
-        
+        base.doAction();
     }
 }

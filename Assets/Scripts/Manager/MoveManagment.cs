@@ -45,8 +45,45 @@ public class MoveManagment : MonoBehaviour
         {
             this.dealIn4.SetActive(true);
             Deal deal = this.dealIn4.GetComponent<Deal>();
-            Opportunity op = gameManager.opportunities;
+            Small_Deal op = (Small_Deal) gameManager.small_deal;
             deal.setTextDeal(op.Opportunity_name,op.Description,op.cost.ToString(),op.Dividend.ToString(),"$"+op.MinTradingRange+" ~ $"+op.MaxTradingRange,op.SharesOwned.ToString());
+        }else if (block.action == Block.Action.Doodads)
+        {
+            this.dealIn4.SetActive(true);
+            Deal deal = this.dealIn4.GetComponent<Deal>();
+            Doodads dood = gameManager.dood;
+            deal.setTextDeal(dood);
+        }
+        else if (block.action == Block.Action.Charity)
+        {
+            this.dealIn4.SetActive(true);
+            Deal deal = this.dealIn4.GetComponent<Deal>();
+            Charity chari= gameManager.charity;
+
+            deal.setTextDeal(chari);
+        }
+        else if (block.action == Block.Action.Offer)
+        {
+            this.dealIn4.SetActive(true);
+            Deal deal = this.dealIn4.GetComponent<Deal>();
+            Offer off = gameManager.offers;
+
+            deal.setTextDeal(off);
+        }
+        else if (block.action == Block.Action.DownSize)
+        {
+            this.dealIn4.SetActive(true);
+            Deal deal = this.dealIn4.GetComponent<Deal>();
+            DownSize downsize = gameManager.downsize;
+            deal.setTextDeal(downsize);
+        }
+        else if (block.action == Block.Action.Paycheck)
+        {
+            this.dealIn4.SetActive(true);
+            Deal deal = this.dealIn4.GetComponent<Deal>();
+            Paycheck pay= gameManager.paycheck;
+
+            deal.setTextDeal(pay);
         }
     }
 

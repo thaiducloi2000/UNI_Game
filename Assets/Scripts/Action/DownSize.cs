@@ -1,12 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class DownSize : MonoBehaviour
+public class DownSize : Action
 {
-    private int skipTurn;
-    private float downSizeAmount;
 
-    public int SkipTurn { get => skipTurn; set => skipTurn = value; }
-    public float DownSizeAmount { get => downSizeAmount; set => downSizeAmount = value; }
+    public DownSize(float cost, string description)
+    {
+        this.type = Action.ActionType.DownSize;
+        this.cost = cost;
+        this.name = "Down Size";
+        this.description = description;
+    }
+
+    public override void doAction()
+    {
+        base.doAction();
+    }
 }

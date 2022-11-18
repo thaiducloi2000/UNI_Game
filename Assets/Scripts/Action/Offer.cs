@@ -1,23 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class Offer : MonoBehaviour
+public class Offer : Action
 {
-    public string offer_name;
-    public float cost;
-    public float morgage;
-    public float cashflow;
-    public float downpay;
-    // Start is called before the first frame update
-    void Start()
+
+    // Change = sell or buy house , H1 = buyer need to buy 2 Br / 2 Ba, H2 = buyer need to buy hose 3 Br /2 Ba
+    public enum typeOffer { Chance, H1, H2 }
+
+    private typeOffer _typeOffer;
+
+    public typeOffer TypeOffer { get => _typeOffer; set => _typeOffer = value; }
+
+    public Offer(typeOffer typeOffer, string offerName,float cost,string description)
     {
-        
+        this.type = ActionType.Offer;
+        this.cost = cost;
+        this.TypeOffer = typeOffer;
+        this.name = offerName;
+        this.description = description;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void doAction()
     {
-        
+        base.doAction();
     }
 }
